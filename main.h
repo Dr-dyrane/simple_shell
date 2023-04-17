@@ -2,7 +2,9 @@
 #define MAIN_H
 
 #define READ_SIZE 1024
-#define MEMORY_POOL_SIZE 1024 * 1024 // 1MB memory pool
+
+/* 1 MB Memory Pool */
+#define MEMORY_POOL_SIZE (1024 * 1024)
 
 #include <unistd.h>
 #include <stdio.h>
