@@ -1,4 +1,4 @@
-#Simple Shell
+# Simple Shell
 
 A simple UNIX command interpreter written in C.
 
@@ -17,7 +17,7 @@ Simple Shell is a simple UNIX command interpreter that reads commands from eithe
 
 This program was written as part of a coding challenge on Ubuntu 20.04 LTS for ALX SE cohort 12 group project: simple\_shell, and may not be suitable for use in production enviroments.
 
-##Getting Started
+## Getting Started
 
 ## Installation
 
@@ -48,7 +48,7 @@ $ ./shell
 You will be presneted with a prompt that looks like this:
 
 ```bash
-(sh)$ 
+(sh)$
 ```
 You can then enter commands to execute, either one at a time, or multiple commands on the same line seperated by a semicolon;
 
@@ -66,7 +66,7 @@ To exit the program, simply type the `exit` command:
 (sh)$ exit
 ```
 
-##Commands
+## Commands
 
 The Simple Shell supports a variety of commands, including built-in commands and external commands:
 
@@ -74,7 +74,7 @@ The Simple Shell supports a variety of commands, including built-in commands and
 $ <command> [arguments]
 ```
 
-##Examples
+## Examples
 
 ```bash
 $ ls
@@ -82,7 +82,7 @@ $ cd /home/user/directory
 $ echo "Hello, world!"
 ```
 
-#Built-in Commands
+## Built-in Commands
 
 The Simple Shell also includes some built-in commands:
 
@@ -112,6 +112,4 @@ Alexander Udeogaranya [<halodyrane@gmail.com>](https://github.com/Dr-dyrane).
 ## Aknowledgement
 
 This program is released under the [ALX SE Program](https://www.alxafrica.com/software-engineering/).
-
-
 
