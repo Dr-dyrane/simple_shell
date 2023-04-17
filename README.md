@@ -102,7 +102,7 @@ $ exit
 
 The Simple Shell returns an exit status to indicate whether the command was executed successfully or not. If the command was executed successfully, the exit status will be 0. If the command was not executed successfully, the exit status will be a non-zero integer.
 
-## Author
+## Authors
 
 This progam was written by;
 
@@ -111,5 +111,4 @@ Alexander Udeogaranya [<halodyrane@gmail.com>](https://github.com/Dr-dyrane).
 
 ## Aknowledgement
 
-This program is released under the [ALX SE Program](https://www.alxafrica.com/software-engineering/).
-
+This program is released under the [ALX SE Program](https://www.alxafrica.com/software-engineering/)
