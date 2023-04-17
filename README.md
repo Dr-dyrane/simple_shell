@@ -60,4 +60,58 @@ file.txt file2.txt file3.txt
 file.txt file2.txt file3.txt
 ```
 
-To exit
+To exit the program, simply type the `exit` command:
+
+```bash
+(sh)$ exit
+```
+
+##Commands
+
+The Simple Shell supports a variety of commands, including built-in commands and external commands:
+
+```bash
+$ <command> [arguments]
+```
+
+##Examples
+
+```bash
+$ ls
+$ cd /home/user/directory
+$ echo "Hello, world!"
+```
+
+#Built-in Commands
+
+The Simple Shell also includes some built-in commands:
+
+```txt
+cd - Change the current working directory.
+exit - Exit the shell.
+```
+
+## Examples
+
+```bash
+$ cd /home/user/directory
+4 exit
+```
+
+## Exit Status
+
+The Simple Shell returns an exit status to indicate whether the command was executed successfully or not. If the command was executed successfully, the exit status will be 0. If the command was not executed successfully, the exit status will be a non-zero integer.
+
+## Author
+
+This progam was written by;
+
+Abas Ubon [<jewellllllll23@gmail.com>](https://github.com/Abasiifreke) and
+Alexander Udeogaranya [<halodyrane@gmail.com>](https://github.com/Dr-dyrane).
+
+## Aknowledgement
+
+This program is released under the [ALX SE Program](https://www.alxafrica.com/software-engineering/).
+
+
+
