@@ -95,7 +95,7 @@ exit - Exit the shell.
 
 ```bash
 $ cd /home/user/directory
-4 exit
+$ exit
 ```
 
 ## Exit Status
