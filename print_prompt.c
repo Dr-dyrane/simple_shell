@@ -13,3 +13,4 @@ void print_prompt(void)
 	if (write(STDOUT_FILENO, prompt, len) == -1)
 		perror("write");
 }
+
