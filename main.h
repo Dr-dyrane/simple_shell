@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stddef.h>
 
 /* Custom memory management functions */
 void *_sbrk(ptrdiff_t increment);

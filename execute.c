@@ -10,6 +10,7 @@
 int execute(char *line, char **envp)
 {
 	size_t len = _strlen(line);
+	char *args[] = {line, NULL};
 
 	if (line[len - 1] != '\n')
 	{
@@ -23,7 +24,7 @@ int execute(char *line, char **envp)
 		return (EXIT_FAILURE);
 	}
 
-	if (execve(line, NULL, envp) == -1)
+	if (execve(line, args, envp) == -1)
 	{
 		perror("execve");
 		return (EXIT_FAILURE);
