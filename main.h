@@ -18,11 +18,13 @@ void *_memcpy(void *dest, const void *src, size_t n);
 
 /* Function prototypes */
 void print_prompt(void);
-int execute(char *line);
+char **env_to_array(void);
+int execute(char *line, char **envp);
 size_t _strlen(char *s);
 int _getline(char **lineptr, size_t *n, FILE *stream);
 int _fgetc(FILE *stream);
 int _putchar(int c);
+extern char **environ;
 
 #endif /* MAIN_H */
 

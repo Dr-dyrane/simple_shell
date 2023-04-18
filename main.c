@@ -11,6 +11,7 @@ int main(void)
 	size_t len = 0;
 	ssize_t nread;
 	int status;
+	char **envp = env_to_array();
 
 	while (1)
 	{
@@ -25,12 +26,12 @@ int main(void)
 			exit(EXIT_SUCCESS);
 		}
 
-		status = execute(line);
+		status = execute(line, envp);
 
 		free(line);
 		line = NULL;
 
-		if (status == EXIT_failure)
+		if (status == EXIT_FAILURE)
 			exit(EXIT_FAILURE);
 	}
 

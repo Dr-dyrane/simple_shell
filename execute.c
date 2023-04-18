@@ -3,10 +3,11 @@
 /**
  * execute - Executes a command
  * @line: command to execute
+ * @envp: enviroment variables array
  *
  * Return: EXIT_SUCCESS on success, EXIT-failure on failure
  */
-int execute(char *line)
+int execute(char *line, char **envp)
 {
 	size_t len = _strlen(line);
 
@@ -19,6 +20,12 @@ int execute(char *line)
 	if (write(STDOUT_FILENO, line, len) == -1)
 	{
 		perror("write");
+		return (EXIT_FAILURE);
+	}
+
+	if (execve(line, NULL, envp) == -1)
+	{
+		perror("execve");
 		return (EXIT_FAILURE);
 	}
 
