@@ -18,7 +18,7 @@ int execute(char *line, char **envp)
 		len--;
 	}
 
-	if (write(STDOUT_FILENO, line, len) == -1)
+	if (write(STDOUT_FILENO, line, len) == EOF)
 	{
 		perror("write");
 		return (EXIT_FAILURE);
@@ -27,7 +27,7 @@ int execute(char *line, char **envp)
 	if (execve(line, args, envp) == -1)
 	{
 		perror("execve");
-		return (EXIT_FAILURE);
+		/*return (EXIT_FAILURE);*/
 	}
 
 	return (EXIT_SUCCESS);

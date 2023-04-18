@@ -19,7 +19,7 @@ int main(void)
 
 		nread = _getline(&line, &len, stdin);
 
-		if (nread == -1)
+		if (nread == EOF)
 		{
 			free(line);
 			_putchar('\n');
