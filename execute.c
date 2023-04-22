@@ -17,8 +17,7 @@ int execute(char *line, char **envp)
 	{
 		line[len - 1] = '\n';
 		len--;
-	}
-
+	} write(STDOUT_FILENO, line, len);
 	size_t argc = 0;
 	char *copy = _strdup(line);
 	char *token = _strtok(copy, " \t\n");
@@ -40,6 +39,7 @@ int execute(char *line, char **envp)
 	while (token)
 	{
 		argv[argc++] = token;
+
 		token = _strtok(NULL, " \t\n");
 	} argv[argc] = NULL; /*Last element should be NULL */
 

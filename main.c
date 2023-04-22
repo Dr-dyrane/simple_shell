@@ -19,10 +19,9 @@ int main(void)
 
 		nread = _getline(&line, &len, stdin);
 
-		if (nread == EOF)
+		if (nread == EOF || (_strcmp(line, "exit\n") == 0))
 		{
 			free(line);
-			_putchar('\n');
 			exit(EXIT_SUCCESS);
 		}
 

@@ -31,6 +31,7 @@ extern char **environ;
 char *_strchr(char *s, char c);
 char *_strtok(char *str, const char *delim);
 char *_strdup(char *str);
+int _strcmp(char *s1, char *s2);
 
 #endif /* MAIN_H */
 
