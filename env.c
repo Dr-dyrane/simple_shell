@@ -29,7 +29,7 @@ char **env_to_array(void)
 
 	while (*p != NULL)
 	{
-		envp[i] = *p;
+		envp[i] = _strdup(*p);
 		i++;
 		p++;
 	}

@@ -27,7 +27,7 @@ int execute(char *line, char **envp)
 	{
 		argc++;
 		token = _strtok(NULL, " \t\n");
-	} free(copy);
+	}
 
 	char **argv = malloc(sizeof(char *) * (argc + 1));
 
@@ -42,12 +42,12 @@ int execute(char *line, char **envp)
 		argv[argc++] = token;
 		token = _strtok(NULL, " \t\n");
 	} argv[argc] = NULL; /*Last element should be NULL */
+
 	if (execve(argv[0], argv, envp) == -1)
 	{
 		perror("execve");
-		free(argv);
-		return (EXIT_FAILURE);
-	} free(argv);
+	} free(copy);
+	free(argv);
 	return (EXIT_SUCCESS);
 }
 
