@@ -5,31 +5,49 @@
  * @line: command to execute
  * @envp: enviroment variables array
  *
- * Return: EXIT_SUCCESS on success, EXIT-failure on failure
+ * Return: EXIT_SUCCESS on success, EXIT-FAILURE on failure
  */
 int execute(char *line, char **envp)
 {
 	size_t len = _strlen(line);
-	char *args[] = {line, NULL};
 
+	if (len == 0)
+		return (EXIT_SUCCESS);
 	if (line[len - 1] != '\n')
 	{
 		line[len - 1] = '\n';
 		len--;
 	}
 
-	if (write(STDOUT_FILENO, line, len) == EOF)
-	{
-		perror("write");
-		return (EXIT_FAILURE);
-	}
+	size_t argc = 0;
+	char *copy = _strdup(line);
+	char *token = _strtok(copy, " \t\n");
 
-	if (execve(line, args, envp) == -1)
+	while (token)
+	{
+		argc++;
+		token = _strtok(NULL, " \t\n");
+	} free(copy);
+
+	char **argv = malloc(sizeof(char *) * (argc + 1));
+
+	if (!argv)
+	{
+		perror("malloc");
+		return (EXIT_FAILURE);
+	} argc = 0;
+	token = _strtok(line, " \t\n");
+	while (token)
+	{
+		argv[argc++] = token;
+		token = _strtok(NULL, " \t\n");
+	} argv[argc] = NULL; /*Last element should be NULL */
+	if (execve(argv[0], argv, envp) == -1)
 	{
 		perror("execve");
-		/*return (EXIT_FAILURE);*/
-	}
-
+		free(argv);
+		return (EXIT_FAILURE);
+	} free(argv);
 	return (EXIT_SUCCESS);
 }
 

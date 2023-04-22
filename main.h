@@ -27,5 +27,10 @@ int _fgetc(FILE *stream);
 int _putchar(int c);
 extern char **environ;
 
+/* String helper functions */
+char *_strchr(char *s, char c);
+char *_strtok(char *str, const char *delim);
+char *_strdup(char *str);
+
 #endif /* MAIN_H */
 

@@ -7,10 +7,16 @@
  */
 void print_prompt(void)
 {
-	char *prompt = "(sh)$ ";
-	size_t len = _strlen(prompt);
+	char cwd[1024];
 
-	if (write(STDOUT_FILENO, prompt, len) == -1)
-		perror("write");
+	if (getcwd(cwd, sizeof(cwd)) != NULL)
+	{
+		for (int i = 0; cwd[i] != '\0'; i++)
+			_putchar(cwd[i]);
+		_putchar('$');
+		_putchar(' ');
+	}
+	else
+		perror("getcwd() error");
 }
 
