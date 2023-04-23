@@ -8,10 +8,11 @@
 void print_prompt(void)
 {
 	char cwd[1024];
+	int i;
 
 	if (getcwd(cwd, sizeof(cwd)) != NULL)
 	{
-		for (int i = 0; cwd[i] != '\0'; i++)
+		for (i = 0; cwd[i] != '\0'; i++)
 			_putchar(cwd[i]);
 		_putchar('$');
 		_putchar(' ');

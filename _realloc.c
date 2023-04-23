@@ -10,12 +10,15 @@
  */
 void *_realloc(void *ptr, size_t size)
 {
+	void *new_ptr;
+
 	if (ptr == NULL)
 		return (malloc(size));
-	void *new_ptr = _sbrk(size);
+	new_ptr = _sbrk(size);
 
 	if (new_ptr == (void *) -1)
 		return (NULL);
 	_memcpy(new_ptr, ptr, size);
 	return (new_ptr);
 }
+

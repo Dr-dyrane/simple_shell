@@ -9,7 +9,10 @@
  */
 int execute(char *line, char **envp)
 {
+	char *argv[1024];
 	size_t len = _strlen(line);
+	size_t argc = parse_args(line, argv);
+	int i, j, status;
 
 	if (len == 0)
 		return (EXIT_SUCCESS);
@@ -19,14 +22,11 @@ int execute(char *line, char **envp)
 		len--;
 	}
 	write(STDOUT_FILENO, line, len);
-
-	char *argv[1024];
-	size_t argc = parse_args(line, argv);
-	int i, status;
+	_putchar('\n');
 
 	for (i = 0; argv[i] != NULL; i++)
 	{
-		for (int j = 0; _builtin[j].name != NULL; j++)
+		for (j = 0; _builtin[j].name != NULL; j++)
 		{
 			if (_strcmp(argv[i], _builtin[j].name) == 0)
 			{
@@ -37,7 +37,7 @@ int execute(char *line, char **envp)
 	}
 	status = execute_command(argv, envp);
 free_argv:
-	for (int i = 0; i < argc; i++)
+	for (i = 0; i < argc; i++)
 	{
 		free(argv[i]);
 	}

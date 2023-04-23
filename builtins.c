@@ -3,11 +3,11 @@
 /**
  * cd - Changes the current working directory
  * @args: Array of arguments
- * @envp: Array of enviroment variables
+ * @envp: Array of enviromental variables
  *
  * Return: Always returns 0 to continue execution.
  */
-int cd(char **args, char **envp)
+int cd(char **args, char **envp __attribute__((unused)))
 {
 	if (args[1] == NULL)
 	{
@@ -26,11 +26,11 @@ int cd(char **args, char **envp)
 /**
  * help - Displays help information for shell builtins
  * @args: Array of arguments
- * @envp: Array of enviroment variables
+ * @envp: Array of enviromental variables
  *
  * Return: Always returns 0 to continue execution.
  */
-int help(char **args, char **envp)
+int help(char **args, char **envp __attribute__((unused)))
 {
 	write(STDOUT_FILENO, "These shell buiitns are available:\n", 36);
 	write(STDOUT_FILENO, "cd\n", 3);
@@ -45,11 +45,11 @@ int help(char **args, char **envp)
 /**
  * exit_shell - Exits the shell
  * @args: Array of arguments
- * @envp: Array of enviroment variables
+ * @envp: Array of enviromental variables
  *
  * Return: Always returns 0 to terminate the shell.
  */
-int exit_shell(char **args, char **envp)
+int exit_shell(char **args, char **envp __attribute__((unused)))
 {
 	int status = EXIT_SUCCESS;
 
@@ -63,12 +63,12 @@ int exit_shell(char **args, char **envp)
 
 /**
  * env - Displays the enviroment variables
- * @args: Array of argumnets
+ * @args: Array of arguments
  * @envp: Array of enviroment variables
  *
  * Return: Always returns 0 to continue execution.
  */
-int env(char **args, char **envp)
+int env(char **args __attribute__((unused)), char **envp)
 {
 	char **env;
 
@@ -83,11 +83,11 @@ int env(char **args, char **envp)
 /**
  * setenv_builtin - Sets an enviroment variable
  * @args: Array of arguments
- * @envp: Array of enviroment variables
+ * @envp: Array of enviromental variables
  *
  * Return: Always return 0 to continue execution.
  */
-int setenv_builtin(char **args, char **envp)
+int setenv_builtin(char **args, char **envp __attribute__((unused)))
 {
 	if (args[1] == NULL || args[2] == NULL)
 	{

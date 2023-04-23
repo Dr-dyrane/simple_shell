@@ -7,7 +7,8 @@
  */
 char **env_to_array(void)
 {
-	int count = 0;
+	char **envp = NULL;
+	int i, count = 0;
 	char **p = environ;
 
 	while (*p != NULL)
@@ -16,7 +17,7 @@ char **env_to_array(void)
 		p++;
 	}
 
-	char **envp = malloc((count + 1) * sizeof(char *));
+	envp = malloc((count + 1) * sizeof(char *));
 
 	if (envp == NULL)
 	{
@@ -25,7 +26,6 @@ char **env_to_array(void)
 	}
 
 	p = environ;
-	int i = 0;
 
 	while (*p != NULL)
 	{

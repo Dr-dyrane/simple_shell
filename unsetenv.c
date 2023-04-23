@@ -3,11 +3,11 @@
 /**
  * unsetenv_builtin - Unsets an enviroment variable
  * @args: Array of arguments
- * @envp: Array of enviroment variables
+ * @envp: Array of enviromental variables
  *
  * Return: Always returns 0 to continue execution.
  */
-int unsetenv_builtin(char **args, char **envp)
+int unsetenv_builtin(char **args, char **envp __attribute__((unused)))
 {
 	if (args[1] == NULL)
 	{
@@ -24,11 +24,11 @@ int unsetenv_builtin(char **args, char **envp)
 }
 /* Declare the array of builtins */
 builtin _builtin[] = {
-        {"cd", cd},
-        {"help", help},
-        {"env", env},
-        {"setenv", setenv_builtin},
-        {"unsetenv", unsetenv_builtin},
-        {NULL, NULL}
+	{"cd", cd},
+	{"help", help},
+	{"env", env},
+	{"setenv", setenv_builtin},
+	{"unsetenv", unsetenv_builtin},
+	{NULL, NULL}
 };
 
