@@ -12,6 +12,7 @@
 #include <string.h>
 #include <stddef.h>
 #include <errno.h>
+#include <dirent.h>
 
 /* Declare the builtin struct */
 /**
@@ -35,6 +36,7 @@ int exit_shell(char **args, char **envp);
 int env(char **args, char **envp);
 int setenv_builtin(char **args, char **envp);
 int unsetenv_builtin(char **args, char **envp);
+int ls(char **args, char **envp);
 
 /* Custom memory management functions */
 void *_sbrk(ptrdiff_t increment);
