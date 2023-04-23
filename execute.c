@@ -13,6 +13,7 @@ int execute(char *line, char **envp)
 	size_t len = _strlen(line);
 	size_t argc = parse_args(line, argv);
 	int i, j, status;
+	size_t a;
 
 	if (len == 0)
 		return (EXIT_SUCCESS);
@@ -37,9 +38,9 @@ int execute(char *line, char **envp)
 	}
 	status = execute_command(argv, envp);
 free_argv:
-	for (i = 0; i < argc; i++)
+	for (a = 0; a < argc; a++)
 	{
-		free(argv[i]);
+		free(argv[a]);
 	}
 	return (status);
 }
