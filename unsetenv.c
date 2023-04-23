@@ -5,7 +5,7 @@
  * @args: Array of arguments
  * @envp: Array of enviroment variables
  *
- * Return: Always returns 1 to continue execution.
+ * Return: Always returns 0 to continue execution.
  */
 int unsetenv_builtin(char **args, char **envp)
 {
@@ -20,7 +20,7 @@ int unsetenv_builtin(char **args, char **envp)
 			perror("unsetenv");
 		}
 	}
-	return (1);
+	return (0);
 }
 /* Declare the array of builtins */
 builtin _builtin[] = {

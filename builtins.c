@@ -5,7 +5,7 @@
  * @args: Array of arguments
  * @envp: Array of enviroment variables
  *
- * Return: Always returns 1 to continue execution.
+ * Return: Always returns 0 to continue execution.
  */
 int cd(char **args, char **envp)
 {
@@ -20,7 +20,7 @@ int cd(char **args, char **envp)
 			perror("cd");
 		}
 	}
-	return (1);
+	return (0);
 }
 
 /**
@@ -28,7 +28,7 @@ int cd(char **args, char **envp)
  * @args: Array of arguments
  * @envp: Array of enviroment variables
  *
- * Return: Always returns 1 to continue execution.
+ * Return: Always returns 0 to continue execution.
  */
 int help(char **args, char **envp)
 {
@@ -39,7 +39,7 @@ int help(char **args, char **envp)
 	write(STDOUT_FILENO, "env\n", 4);
 	write(STDOUT_FILENO, "setenv\n", 7);
 	write(STDOUT_FILENO, "unsetenv\n", 9);
-	return (1);
+	return (0);
 }
 
 /**
@@ -66,7 +66,7 @@ int exit_shell(char **args, char **envp)
  * @args: Array of argumnets
  * @envp: Array of enviroment variables
  *
- * Return: Always returns 1 to continue execution.
+ * Return: Always returns 0 to continue execution.
  */
 int env(char **args, char **envp)
 {
@@ -77,7 +77,7 @@ int env(char **args, char **envp)
 		write(STDOUT_FILENO, *env, _strlen(*env));
 		write(STDOUT_FILENO, "\n", 1);
 	}
-	return (1);
+	return (0);
 }
 
 /**
@@ -85,7 +85,7 @@ int env(char **args, char **envp)
  * @args: Array of arguments
  * @envp: Array of enviroment variables
  *
- * Return: Always return 1 to continue execution.
+ * Return: Always return 0 to continue execution.
  */
 int setenv_builtin(char **args, char **envp)
 {
@@ -100,6 +100,6 @@ int setenv_builtin(char **args, char **envp)
 			perror("setenv");
 		}
 	}
-	return (1);
+	return (0);
 }
 
