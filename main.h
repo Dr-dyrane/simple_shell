@@ -25,6 +25,9 @@ typedef struct builtin
 	int (*func)(char **args, char **envp);
 } builtin;
 
+/* Declare the array of builtins */
+extern builtin _builtin[];
+
 /* Declare the possible builin functions */
 int cd(char **args, char **envp);
 int help(char **args, char **envp);
@@ -32,16 +35,6 @@ int exit_shell(char **args, char **envp);
 int env(char **args, char **envp);
 int setenv_builtin(char **args, char **envp);
 int unsetenv_builtin(char **args, char **envp);
-
-/* Declare the array of builtins */
-builtin my_builtins[] = {
-	{"cd", cd},
-	{"help", help},
-	{"env", env},
-	{"setenv", setenv_builtin},
-	{"unsetenv", unsetenv_builtin},
-	{NULL, NULL}
-};
 
 /* Custom memory management functions */
 void *_sbrk(ptrdiff_t increment);

@@ -26,11 +26,11 @@ int execute(char *line, char **envp)
 
 	for (i = 0; argv[i] != NULL; i++)
 	{
-		for (int j = 0; my_builtins[j].name != NULL; j++)
+		for (int j = 0; _builtin[j].name != NULL; j++)
 		{
-			if (_strcmp(argv[i], my_builtins[j].name) == 0)
+			if (_strcmp(argv[i], _builtin[j].name) == 0)
 			{
-				status = my_builtins[j].func(argv, envp);
+				status = _builtin[j].func(argv, envp);
 				goto free_argv;
 			}
 		}

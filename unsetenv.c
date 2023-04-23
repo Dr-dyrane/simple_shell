@@ -22,4 +22,13 @@ int unsetenv_builtin(char **args, char **envp)
 	}
 	return (1);
 }
+/* Declare the array of builtins */
+builtin _builtin[] = {
+        {"cd", cd},
+        {"help", help},
+        {"env", env},
+        {"setenv", setenv_builtin},
+        {"unsetenv", unsetenv_builtin},
+        {NULL, NULL}
+};
 
