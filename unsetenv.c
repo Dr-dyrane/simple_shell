@@ -26,6 +26,7 @@ int unsetenv_builtin(char **args, char **envp __attribute__((unused)))
 builtin _builtin[] = {
 	{"cd", cd},
 	{"help", help},
+	{"exit", exit_shell},
 	{"env", env},
 	{"setenv", setenv_builtin},
 	{"unsetenv", unsetenv_builtin},

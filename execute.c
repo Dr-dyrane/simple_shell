@@ -17,13 +17,13 @@ int execute(char *line, char **envp)
 
 	if (len == 0)
 		return (EXIT_SUCCESS);
-	if (line[len - 1] != '\n')
+	if (line[len - 1] == '\n')
 	{
-		line[len - 1] = '\n';
+		line[len - 1] = '\0';
 		len--;
 	}
-	write(STDOUT_FILENO, line, len);
-	_putchar('\n');
+	/* write(STDOUT_FILENO, line, len);
+	_putchar('\n'); */
 
 	for (i = 0; argv[i] != NULL; i++)
 	{
