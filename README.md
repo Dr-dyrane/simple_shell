@@ -10,6 +10,7 @@ A simple UNIX command interpreter written in C.
 - [Commands](#commands)
 - [Built-in Commands](#built-in-commands)
 - [Authors](#authors)
+- [Flowchart](#flowchart)
 
 ## Introduction
 
@@ -28,7 +29,7 @@ This will build the `shell` executable.
 To get started , clone the repository and compile the program using `gcc` compiler:
 
 ```bash
-$ git clone https://github.com/Abasiifreke/simple_shell.git
+$ git clone https://github.com/Dr-dyrane/simple_shell.git
 $ cd simple_shell
 $ gcc -Wall -Werror -Wextra -pedantric *.c -o shell
 ```
@@ -106,9 +107,13 @@ The Simple Shell returns an exit status to indicate whether the command was exec
 
 This progam was written by;
 
-Abas Ubon [<jewellllllll23@gmail.com>](https://github.com/Abasiifreke) and
-Alexander Udeogaranya [<halodyrane@gmail.com>](https://github.com/Dr-dyrane).
+Alexander Udeogaranya [<ogranya.alex@gmail.com>](https://github.com/Dr-dyrane).
 
 ## Aknowledgement
 
 This program is released under the [ALX SE Program](https://www.alxafrica.com/software-engineering/)
+
+## Flowchart
+
+![simple shell](https://user-images.githubusercontent.com/115133529/234009678-90eae536-26f3-4ee5-b0ba-4f1eb5fe1549.png)
+
