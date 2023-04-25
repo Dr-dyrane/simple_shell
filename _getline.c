@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _getline - read a line to form a file stream
+ * _getline - read a line from a file stream
  *
  * @lineptr: pointer to the buffer where the line will be stored
  * @n: The size of the buffer
