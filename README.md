@@ -107,12 +107,8 @@ The Simple Shell returns an exit status to indicate whether the command was exec
 
 This progam was written by;
 
-<<<<<<< HEAD
 Ukpon Umoren [<ukpono9@gmail.com>](https://github.com/ukeremi) and
 Alexander Udeogaranya [<halodyrane@gmail.com>](https://github.com/Dr-dyrane).
-=======
-Alexander Udeogaranya [<ogranya.alex@gmail.com>](https://github.com/Dr-dyrane).
->>>>>>> 927c2b18192936ff449a9d2dd76508b569badefc
 
 ## Aknowledgement
 
