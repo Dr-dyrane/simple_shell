@@ -83,4 +83,3 @@ int ls(char **args, char **envp __attribute__((unused)))
 	closedir(dir);
 	return (0);
 }
-

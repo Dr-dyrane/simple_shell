@@ -3,7 +3,7 @@
 /**
  * _sbrk - customised sbrk
  *
- * @increment: the number of byted to increase the program break by
+ * @increment: the number of bytes to increase the program break by
  *
  * Return: a pointer to the start of the newly allocated memory block
  */

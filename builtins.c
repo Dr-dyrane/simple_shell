@@ -2,8 +2,8 @@
 
 /**
  * cd - Changes the current working directory
- * @args: Array of arguments
- * @envp: Array of enviromental variables
+ * @args: An Array of arguments
+ * @envp: An aArray of enviromental variables
  *
  * Return: Always returns 0 to continue execution.
  */
@@ -25,8 +25,8 @@ int cd(char **args, char **envp __attribute__((unused)))
 
 /**
  * help - Displays help information for shell builtins
- * @args: Array of arguments
- * @envp: Array of enviromental variables
+ * @args: An array of arguments
+ * @envp: An array of enviromental variables
  *
  * Return: Always returns 0 to continue execution.
  */
@@ -44,8 +44,8 @@ int help(char **args __attribute__((unused)), char **envp __attribute__((unused)
 
 /**
  * exit_shell - Exits the shell
- * @args: Array of arguments
- * @envp: Array of enviromental variables
+ * @args: An array of arguments
+ * @envp: An array of enviromental variables
  *
  * Return: Always returns 0 to terminate the shell.
  */
@@ -63,10 +63,10 @@ int exit_shell(char **args, char **envp __attribute__((unused)))
 
 /**
  * env - Displays the enviroment variables
- * @args: Array of arguments
- * @envp: Array of enviroment variables
+ * @args: An array of arguments
+ * @envp: An array of enviroment variables
  *
- * Return: Always returns 0 to continue execution.
+ * Return: Always returns (0) to continue execution.
  */
 int env(char **args __attribute__((unused)), char **envp)
 {
@@ -82,10 +82,10 @@ int env(char **args __attribute__((unused)), char **envp)
 
 /**
  * setenv_builtin - Sets an enviroment variable
- * @args: Array of arguments
- * @envp: Array of enviromental variables
+ * @args: An array of arguments
+ * @envp: An array of enviromental variables
  *
- * Return: Always return 0 to continue execution.
+ * Return: Always return (0) to continue execution.
  */
 int setenv_builtin(char **args, char **envp __attribute__((unused)))
 {
@@ -102,4 +102,3 @@ int setenv_builtin(char **args, char **envp __attribute__((unused)))
 	}
 	return (0);
 }
-

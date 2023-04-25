@@ -2,16 +2,16 @@
 
 /**
  * _strlen - calculates the length of a string
- * @s: string to calculate length of
+ * @s: string to be  calculated of the length
  *
  * Return: length of the string
  */
 size_t _strlen(char *s)
 {
-	size_t i;
+	size_t au_i;
 
-	for (i = 0; s[i]; i++)
+	for (au_i = 0; s[au_i]; au_i++)
 	;
 
-	return (i);
+	return (au_i);
 }

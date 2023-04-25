@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * print_prompt - Prints the prompt
+ * print_prompt - Prints the prompt for us
  *
- * Return: void
+ * Return: void to be returned
  */
 void print_prompt(void)
 {
 	char cwd[1024];
-	int i;
+	int au_i;
 
 	if (getcwd(cwd, sizeof(cwd)) != NULL)
 	{
-		for (i = 0; cwd[i] != '\0'; i++)
-			_putchar(cwd[i]);
+		for (au_i = 0; cwd[au_i] != '\0'; au_i++)
+			_putchar(cwd[au_i]);
 		_putchar('$');
 		_putchar(' ');
 	}

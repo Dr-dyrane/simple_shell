@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _isdigit - Check if a character is a digit
- * @c: The character to check
+ * _isdigit - Check if a character is a digit or not
+ * @c: The character to be check
  *
- * Return: 1 if the character is a digit, 0 otherwise
+ * Return: 1 only if the character is a digit, 0 otherwise
  */
 int _isdigit(int c)
 {
@@ -12,29 +12,28 @@ int _isdigit(int c)
 }
 
 /**
- * _atoi - Convert a string to an integer
- * @s: The string to convert
+ * _atoi - Convert a string to integer
+ * @s: The string to be converted
  *
- * Return: The integer value of the string
+ * Return: integer value of the string
  */
 int _atoi(char *s)
 {
-	int sign = 1;
-	int result = 0;
+	int hint = 1;
+	int outcom = 0;
 
 	while (*s == ' ' || *s == '\t' || *s == '\n')
 		s++;
 	if (*s == '+' || *s == '-')
 	{
 		if (*s == '-')
-			sign = -1;
+			hint = -1;
 		s++;
 	}
 	while (_isdigit(*s))
 	{
-		result = result * 10 + (*s - '0');
+		outcom = outcom * 10 + (*s - '0');
 		s++;
 	}
-	return (sign * result);
+	return (hint * outcom);
 }
-

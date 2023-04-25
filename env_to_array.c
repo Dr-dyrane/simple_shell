@@ -8,13 +8,13 @@
 char **env_to_array(void)
 {
 	char **envp = NULL;
-	int i, count = 0;
-	char **p = environ;
+	int ua_i, count = 0;
+	char **ua = environ;
 
-	while (*p != NULL)
+	while (*ua != NULL)
 	{
 		count++;
-		p++;
+		ua++;
 	}
 
 	envp = malloc((count + 1) * sizeof(char *));
@@ -25,16 +25,15 @@ char **env_to_array(void)
 		exit(EXIT_FAILURE);
 	}
 
-	p = environ;
+	ua = environ;
 
-	while (*p != NULL)
+	while (*ua != NULL)
 	{
-		envp[i] = _strdup(*p);
-		i++;
-		p++;
+		envp[ua_i] = _strdup(*ua);
+		ua_i++;
+		ua++;
 	}
-	envp[i] = NULL;
+	envp[ua_i] = NULL;
 
 	return (envp);
 }
-

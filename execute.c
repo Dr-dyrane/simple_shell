@@ -12,8 +12,8 @@ int execute(char *line, char **envp)
 	char *argv[1024];
 	size_t len = _strlen(line);
 	size_t argc = parse_args(line, argv);
-	int i, j, status;
-	size_t a;
+	int au_i, au_j, status;
+	size_t au;
 
 	if (len == 0)
 		return (EXIT_SUCCESS);
@@ -25,30 +25,30 @@ int execute(char *line, char **envp)
 	/* write(STDOUT_FILENO, line, len);
 	_putchar('\n'); */
 
-	for (i = 0; argv[i] != NULL; i++)
+	for (au_i = 0; argv[au_i] != NULL; au_i++)
 	{
-		for (j = 0; _builtin[j].name != NULL; j++)
+		for (au_j = 0; _builtin[au_j].name != NULL; au_j++)
 		{
-			if (_strcmp(argv[i], _builtin[j].name) == 0)
+			if (_strcmp(argv[au_i], _builtin[au_j].name) == 0)
 			{
-				status = _builtin[j].func(argv, envp);
+				status = _builtin[au_j].func(argv, envp);
 				goto free_argv;
 			}
 		}
 	}
 	status = execute_command(argv, envp);
 free_argv:
-	for (a = 0; a < argc; a++)
+	for (au = 0; au < argc; au++)
 	{
-		free(argv[a]);
+		free(argv[au]);
 	}
 	return (status);
 }
 
 /**
- * parse_args - Parses arguments from a command line
- * @line: Command line to parse
- * @argv: Array to store parsed arguments
+ * parse_args - Parses arguments from any command line
+ * @line: Command line to be parsed
+ * @argv: An array to store parsed arguments
  *
  * Return: Number of arguments parsed
  */
@@ -68,14 +68,14 @@ size_t parse_args(char *line, char **argv)
 		argc++;
 		token = _strtok(NULL, " \t\n");
 	}
-	argv[argc] = NULL; /*Last element should be NULL */
+	argv[argc] = NULL; /* The Last element here should be NULL */
 	return (argc);
 }
 
 /**
- * execute_command - Executed a command with a given arguments
- * @argv: Array of arguments for the command
- * @envp: Array of enviroment variables
+ * execute_command - Execute commands with a given arguments
+ * @argv: An array of arguments for the command
+ * @envp: An array of enviroment variables
  *
  * Return: EXIT_SUCCESS on success, EXIT_FAILURE on failure
  */
@@ -87,4 +87,3 @@ int execute_command(char **argv, char **envp)
 	}
 	return (EXIT_SUCCESS);
 }
-
