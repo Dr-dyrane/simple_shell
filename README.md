@@ -10,6 +10,7 @@ A simple UNIX command interpreter written in C.
 - [Commands](#commands)
 - [Built-in Commands](#built-in-commands)
 - [Authors](#authors)
+- [Flowchart](#flowchart)
 
 ## Introduction
 
@@ -106,9 +107,18 @@ The Simple Shell returns an exit status to indicate whether the command was exec
 
 This progam was written by;
 
+<<<<<<< HEAD
 Ukpon Umoren [<ukpono9@gmail.com>](https://github.com/ukeremi) and
 Alexander Udeogaranya [<halodyrane@gmail.com>](https://github.com/Dr-dyrane).
+=======
+Alexander Udeogaranya [<ogranya.alex@gmail.com>](https://github.com/Dr-dyrane).
+>>>>>>> 927c2b18192936ff449a9d2dd76508b569badefc
 
 ## Aknowledgement
 
 This program is released under the [ALX SE Program](https://www.alxafrica.com/software-engineering/)
+
+## Flowchart
+
+![simple shell](https://user-images.githubusercontent.com/115133529/234009678-90eae536-26f3-4ee5-b0ba-4f1eb5fe1549.png)
+
