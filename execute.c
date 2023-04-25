@@ -25,6 +25,7 @@ int execute(char *line, char **envp)
 	/* write(STDOUT_FILENO, line, len); */
 	/* _putchar('\n'); */
 
+	/* Execute built-in command or non-built-in command based on parsed input */
 	for (au_i = 0; argv[au_i] != NULL; au_i++)
 	{
 		for (au_j = 0; _builtin[au_j].name != NULL; au_j++)
