@@ -50,7 +50,7 @@ int ls(char **args, char **envp __attribute__((unused)))
 	int include_hidden = 0;
 
     /* Check if the first argument is the "-a" flag */
-	if (args[1] != NULL && strcmp(args[1], "-a") == 0)
+	if (args[1] != NULL && _strcmp(args[1], "-a") == 0)
 	{
 		include_hidden = 1;
 	}

@@ -23,7 +23,7 @@ char *_strtok(char *str, const char *delim)
 	while (delim_ptr == NULL && *last_str != '\0')
 	{
 		last_str++;
-		delim_ptr = strchr(delim, *last_str);
+		delim_ptr = _strchr((char *)delim, *last_str);
 	}
 	if (*last_str != '\0')
 	{
