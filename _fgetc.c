@@ -16,3 +16,4 @@ int _fgetc(FILE *stream)
 
 	return (ret == -1 ? EOF : (int)c);
 }
+

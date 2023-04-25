@@ -30,8 +30,12 @@ int cd(char **args, char **envp __attribute__((unused)))
  *
  * Return: Always returns 0 to continue execution.
  */
-int help(char **args __attribute__((unused)), char **envp __attribute__((unused)))
+int help(char **args, char **envp)
 {
+	/* Declare unused parameters */
+	(void)args;
+	(void)envp;
+
 	write(STDOUT_FILENO, "These shell buiitns are available:\n", 36);
 	write(STDOUT_FILENO, "cd\n", 3);
 	write(STDOUT_FILENO, "ls\n", 3);
@@ -103,3 +107,4 @@ int setenv_builtin(char **args, char **envp __attribute__((unused)))
 	}
 	return (0);
 }
+

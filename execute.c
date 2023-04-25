@@ -22,8 +22,8 @@ int execute(char *line, char **envp)
 		line[len - 1] = '\0';
 		len--;
 	}
-	/* write(STDOUT_FILENO, line, len);
-	_putchar('\n'); */
+	/* write(STDOUT_FILENO, line, len); */
+	/* _putchar('\n'); */
 
 	for (au_i = 0; argv[au_i] != NULL; au_i++)
 	{
@@ -87,3 +87,4 @@ int execute_command(char **argv, char **envp)
 	}
 	return (EXIT_SUCCESS);
 }
+

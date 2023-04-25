@@ -37,3 +37,4 @@ int _atoi(char *s)
 	}
 	return (hint * outcom);
 }
+

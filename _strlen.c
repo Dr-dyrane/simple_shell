@@ -15,3 +15,4 @@ size_t _strlen(char *s)
 
 	return (au_i);
 }
+
