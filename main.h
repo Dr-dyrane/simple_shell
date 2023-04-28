@@ -1,67 +1,75 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#define READ_SIZE 1024
-
-/* 1 MB Memory Pool */
-#define MEMORY_POOL_SIZE (1024 * 1024)
-
-#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stddef.h>
-#include <errno.h>
-#include <dirent.h>
+#include <unistd.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
-/* Declare the builtin struct */
+#define BUFFER 1024
+#define TRUE 1
+#define PROMPT "$ "
+/* error strings */
+#define ERR_MALLOC "Unable to malloc space\n"
+#define ERR_FORK "Unable to fork and create second process\n"
+#define ERR_PATH "No such file or directory\n"
+extern char **environ;
+
 /**
- * struct builtin - builtin functions structure definition
- * @name: Function name
- * @func: Built in function customisation typecasting
- */
-typedef struct builtin
+ * struct list_s - the linked list of variables
+ * @value:the  value
+ * @next: pointer to next node
+ *
+ * Description: the generic linked list struct for variables.
+**/
+typedef struct list_s
+{
+	char *value;
+	struct list_s *next;
+} list_s;
+
+/**
+ * struct built_s - linked list of builtins
+ * @name: name of builtin
+ * @p: pointer to function
+ *
+ * Description: struct for builtin functions.
+**/
+typedef struct built_s
 {
 	char *name;
-	int (*func)(char **args, char **envp);
-} builtin;
+	int (*p)(void);
+} built_s;
 
-/* Declare the array of builtins */
-extern builtin _builtin[];
+void prompt(int fd, struct stat buf);
+char *_get_line(FILE *fp);
+char **tok_enizer(char *str);
+char *_directpath(char *order, char *wholepath, char *path);
+int second(char *wholepath, char **to_kens);
+void report_errors(int error);
 
-/* Declare the possible builin functions */
-int cd(char **args, char **envp);
-int help(char **args, char **envp);
-int exit_shell(char **args, char **envp);
-int env(char **args, char **envp);
-int setenv_builtin(char **args, char **envp);
-int unsetenv_builtin(char **args, char **envp);
-int ls(char **args, char **envp);
+/* the utility functions */
+void _puts(char *str);
+int _strlen(char *s);
+int _strcmp(char *name, char *variable, unsigned int length);
+int _strncmp(char *name, char *variable, unsigned int length);
+char *_strcpy(char *dest, char *src);
 
-/* Custom memory management functions */
-void *_sbrk(ptrdiff_t increment);
-void *_realloc(void *ptr, size_t size);
-void *_memcpy(void *dest, const void *src, size_t n);
+/* the prototypes for builtins */
+int my_shell_env(void);
+int my_shell_exit(void);
+int execute_built_ins(char **to_kens);
+int shell_num_builtins(built_s builtin[]);
 
-/* Function prototypes */
-void print_prompt(void);
-char **env_to_array(void);
-int execute(char *line, char **envp);
-size_t parse_args(char *line, char **argv);
-int execute_command(char **argv, char **envp);
-size_t _strlen(char *s);
-int _getline(char **lineptr, size_t *n, FILE *stream);
-int _fgetc(FILE *stream);
-int _putchar(int c);
-extern char **environ;
-int _isdigit(int c);
-int _atoi(char *s);
+/* prototypes for the helper functions for path linked list */
+char *get_env(const char *name);
+char **dup_env(char **environ_dup, unsigned int env_le_ngth);
+list_s *pathlist(char *variable, list_s *head);
 
-/* String helper functions */
-char *_strchr(char *s, char c);
-char *_strtok(char *str, const char *delim);
-char *_strdup(char *str);
-int _strcmp(char *s1, char *s2);
-
+/* the prototypes for free functions */
+void free_all(char **tokens, char *path, char *line, char *fullpath, int flag);
+void free_dp(char **array, unsigned int length);
 #endif /* MAIN_H */
-
