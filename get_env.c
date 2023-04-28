@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _getenv - gets an environment variable
+ * get_env - gets an environment variable
  * @name: environment variable to get
  * Return: pointer to environment variable or NULL if there is no match
  */
@@ -50,9 +50,9 @@ char *get_env(const char *name)
 }
 
 /**
- * copy_env - copies environment variable
- * @environ_copy: pointer to copy of environment variable
- * @environ_length: length of environment variable
+ * dup_env - copies environment variable
+ * @environ_dup: pointer to copy of environment variable
+ * @env_le_ngth: length of environment variable
  * Return: double pointer to copy of environment variable
  */
 char **dup_env(char **environ_dup, unsigned int env_le_ngth)

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * tokenizer - tokenizes any string
+ * tok_enizer - tokenizes any string
  * @str: user input
  * Return: pointer to array of tokens
  */

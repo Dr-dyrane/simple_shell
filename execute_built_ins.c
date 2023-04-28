@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-**builtin_execute - to executes the built in functions
+**execute_built_ins - to executes the built in functions
 **@tokens: arguments being passed
 **Return: tokens
 **/

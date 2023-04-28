@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _getline - puts input from user into buffer line
+ * _get_line - puts input from user into buffer line
  * @fp: buffer for user input
  * Return: buffer with user input
  */

@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _which - it searches the directories in the PATH variables for command
- * @command: to search for
- * @fullpath: full path of command to execute
+ * _directpath - it searches the directories in the PATH variables for command
+ * @order: to search for
+ * @wholepath: whole path of order to execute
  * @path: full PATH variable
- * Return: pointer to full_path
+ * Return: pointer to whole_path
  */
 char *_directpath(char *order, char *wholepath, char *path)
 {
