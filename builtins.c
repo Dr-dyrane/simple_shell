@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-**my_exit_shell - to exits the shell
+**my_shell_exit - to exits the shell
 **Return: void
 **/
 
@@ -12,7 +12,7 @@ int my_shell_exit(void)
 
 
 /**
-**my_environment_shell - to prints environment
+**my_shell_env - to prints environment
 **Return: yes void
 **/
 

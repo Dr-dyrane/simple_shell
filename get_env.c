@@ -65,7 +65,7 @@ char **dup_env(char **environ_dup, unsigned int env_le_ngth)
 	if (environ_dup == NULL)
 	{
 		report_errors(3);
-	
+
 		return (NULL);
 	}
 

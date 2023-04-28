@@ -1,8 +1,8 @@
 #include "main.h"
 /**
 **execute_built_ins - to executes the built in functions
-**@tokens: arguments being passed
-**Return: tokens
+**@to_kens: arguments being passed
+**Return: to_kens
 **/
 int execute_built_ins(char **to_kens)
 {

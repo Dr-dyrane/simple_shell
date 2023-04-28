@@ -2,8 +2,8 @@
 
 /**
  * second - function for second process
- * @wholepath: whole path of executable
- * @tokens: tokenized user input
+ * @wholepath: wholepath of executable
+ * @to_kens: tokenized user input
  * Return: always 0
  */
 

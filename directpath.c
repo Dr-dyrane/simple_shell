@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _directpath - it searches the directories in the PATH variables for command
  * @order: to search for
@@ -21,7 +20,6 @@ char *_directpath(char *order, char *wholepath, char *path)
 		return (NULL);
 	}
 	_strcpy(path_dup, path);
-
 	/* copy PATH directory + command name and check if it exists */
 	token = strtok(path_dup, ":");
 	if (token == NULL)
