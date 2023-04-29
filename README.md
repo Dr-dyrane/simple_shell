@@ -5,8 +5,8 @@ A simple UNIX command interpreter written in C.
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [TO Get Started]
-- [how to use]
+- [To Get Started]
+- [How to use]
 - [Common commands to enter]
 - [Built-in Commands](#built-in-commands)
 - [Authors]
@@ -37,7 +37,7 @@ $ gcc -Wall -Werror -Wextra -pedantric *.c -o shell
 
 This program implements a basic shell in C language. It provides a simple command-line interface for the user to execute commands. The program reads input from the user and executes the command using the `execve` system call.
 
-## Usage
+## How to use
 
 Run the `shell` executable. The program will display a prompt and wait for user's input. Then enter a command and press enter in ordder to execute the command.
 
@@ -83,7 +83,7 @@ $ echo "Hello, world!"
 
 ## Built-in Commands
 
-The Simple Shell also includes some built-in commands:
+This Shell also includes some built-in commands:
 
 ```txt
 cd - To Change the current working directory.
