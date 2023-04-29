@@ -5,8 +5,8 @@ A simple UNIX command interpreter written in C.
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [To Get Started]
-- [How to use]
+- To Get Started
+- How to use
 - [Common commands to enter]
 - [Built-in Commands](#built-in-commands)
 - [Authors]
