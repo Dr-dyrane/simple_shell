@@ -6,8 +6,8 @@ A simple UNIX command interpreter written in C.
 
 - [Introduction](#introduction)
 - [TO Get Started]
-- [Usage]
-- [Commands]
+- [how to use]
+- [Common commands to enter]
 - [Built-in Commands](#built-in-commands)
 - [Authors]
 - [Flowchart](#flowchart)
@@ -18,7 +18,7 @@ Simple Shell is a UNIX command interpreter that reads IN commands from either a 
 
 This program was written as part of a coding challenge on Ubuntu 20.04 LTS for ALX SE cohort 12 group project: simple\_shell, and may not be suitable for use in any production enviroments.
 
-## To Started
+## To Get Started
 
 ## How to Install
 
